@@ -1,0 +1,674 @@
+{
+  "cartPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "summary": "1. Review",
+      "shippingPayment": "2. Delivery and Payment Details"
+    },
+    "success": {
+      "title": "Payment Authorized Successfully!",
+      "description": "Your transaction has been approved. Your cloud hosting plan configuration is currently being processed for immediate activation.",
+      "paymentReference": "Payment ID:",
+      "paidAmount": "Total Paid:",
+      "transactionStatus": "Transaction State:",
+      "approved": "APPROVED",
+      "backToCatalog": "Return to Catalog"
+    },
+    "empty": {
+      "title": "Your shopping cart is empty",
+      "description": "We could not find any hosting services or plans selected in your current browsing session.",
+      "goToStore": "View Catalog"
+    },
+    "order": {
+      "title": "Products in Your Order",
+      "clear": "Remove Plans"
+    },
+    "financial": {
+      "title": "Account Summary",
+      "couponPlaceholder": "Promo code",
+      "applyCoupon": "Validate",
+      "appliedCoupon": "Promo {code} (-{discount}%)",
+      "remove": "Delete",
+      "couponInvalid": "The discount code you entered is invalid or has expired.",
+      "subtotal": "Subtotal amount:",
+      "discount": "Discount applied:",
+      "netTotal": "Net Balance Due:",
+      "tax": "VAT {tax}"
+    },
+    "actions": {
+      "proceedToPayment": "Continue to Payment Form",
+      "processing": "Checking Funds through Etomin...",
+      "payAmount": "Authorize {amount}",
+      "backToCart": "Edit my order / Modify coupon"
+    },
+    "errors": {
+      "declined": "The charge was rejected by the card issuer.",
+      "connection": "A communication error occurred with the payment platform."
+    },
+    "metadata": {
+      "couponApplied": "Promo code active",
+      "standardSale": "Standard digital purchase"
+    },
+    "form": {
+      "buyerTitle": "Purchaser / Billing Details",
+      "addressTitle": "Contact and Activation Details",
+      "paymentTitle": "Secured Payment Gateway",
+      "firstName": "First Name(s) *",
+      "lastName": "Last Name(s) *",
+      "email": "Email Address *",
+      "phone": "Cell Phone (10 digits) *",
+      "company": "Company Name (Optional)",
+      "streetAddress": "Street, Exterior No. and Interior No. *",
+      "streetAddressPlaceholder": "Av. Universidad 450, Apt 4",
+      "neighborhood": "Neighborhood / Intersections (Optional)",
+      "neighborhoodPlaceholder": "Vértiz Narvarte",
+      "city": "City *",
+      "state": "State / Province *",
+      "statePlaceholder": "Mexico City",
+      "postalCode": "ZIP / Postal Code *",
+      "country": "Country",
+      "mexico": "Mexico (MX)",
+      "cardNumber": "Card Number (Visa / Mastercard) *",
+      "cardNumberPlaceholder": "4152 0000 0000 0000",
+      "cardHolderName": "Cardholder Full Name *",
+      "cardHolderPlaceholder": "Exactly as shown on the card",
+      "expiryMonth": "Exp. Month (MM) *",
+      "expiryMonthPlaceholder": "05",
+      "expiryYear": "Exp. Year (YYYY) *",
+      "expiryYearPlaceholder": "2029",
+      "cvv": "Security Code (CVV) *",
+      "cvvPlaceholder": "•••"
+    },
+    "security": {
+      "note": "Secured Transaction"
+    },
+    "images": {
+      "etominAlt": "Etomin",
+      "securePaymentAlt": "Safe transaction"
+    }
+  },
+  "customPlan": {
+    "hero": {
+      "titleHighlight": "Pay",
+      "titleMain": "your quote",
+      "subtitle": "Customized Configuration",
+      "description": "A solution tailored specifically to your business operations. Every business has unique workflows, timelines, and goals. That is why we develop structural frameworks fully aligned with your exact needs.",
+      "includesTitle": "What does this solution include?",
+      "features": {
+        "item1": "Analysis of your current sales process",
+        "item2": "Identification of automation opportunities",
+        "item3": "Tailored solution design",
+        "item4": "Custom strategic implementation",
+        "item5": "Result-oriented optimization"
+      },
+      "investmentLabel": "Investment",
+      "investmentValue": "Defined by project scope",
+      "investmentTax": "+ TAX / VAT"
+    },
+    "form": {
+      "badge": "Custom Services",
+      "title": "Project Details",
+      "firstNameLabel": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastNameLabel": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "phoneLabel": "Contact Phone",
+      "phonePlaceholder": "e.g., +1 555 123 4567",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "email@example.com",
+      "quoteLabel": "Quote / Folio Number",
+      "quotePlaceholder": "e.g., QT-2026-001",
+      "amountLabel": "Amount to Pay",
+      "amountPlaceholder": "0.00",
+      "taxNote": "The final quote amount must be exact and include taxes if agreed upon with your sales representative."
+    },
+    "authorized": {
+      "description": "Please complete the contact information and the quote number assigned by our team. The amount entered must match your official budget document exactly."
+    },
+    "errors": {
+      "firstNameRequired": "First name is required.",
+      "lastNameRequired": "Last name is required.",
+      "phoneRequired": "Phone number is required.",
+      "emailRequired": "Email address is required.",
+      "quoteRequired": "Quote / Folio number is required.",
+      "invalidAmount": "Please enter a valid amount greater than zero."
+    },
+    "buttons": {
+      "adding": "Adding to cart...",
+      "addToCart": "Proceed to checkout"
+    }
+  },
+  "Emails": {
+    "checkout": {
+      "errorMissingFields": "Required fields are missing to process the order",
+      "errorSending": "Internal server error",
+      "client": {
+        "subject": "Purchase Receipt #{orderId} - {brandName}",
+        "title": "Order Confirmation",
+        "subtitle": "Thank you for your business. Your order #{orderId} has been successfully processed, and we have begun preparing your medical supplies."
+      },
+      "business": {
+        "subject": "[Sale] Order #{orderId} - ${amount} MXN",
+        "title": "New Sale Processed",
+        "subtitle": "A new successful payment of ${amount} MXN has been registered for medical supplies and equipment."
+      },
+      "labels": {
+        "orderId": "Order ID",
+        "paymentDate": "Payment Date",
+        "buyerInfo": "Buyer Information",
+        "billingDetails": "Billing Details",
+        "customer": "Customer",
+        "address": "Shipping Address",
+        "company": "Institution / Company",
+        "operationDetails": "Transaction Details",
+        "modulesSummary": "Products and Items Summary",
+        "totalPaid": "Total Paid"
+      },
+      "footer": {
+        "copyright": "© {year} {brandName}. All rights reserved.",
+        "specialty": "Specialized distribution of high-quality medical supplies, equipment, and healthcare products."
+      }
+    },
+    "contact": {
+      "errorMissingFields": "Required fields are missing (name, email, message)",
+      "errorSending": "Internal server error",
+      "business": {
+        "subject": "[Inquiry] {asunto} - {nombre}",
+        "title": "New Contact Inquiry",
+        "subtitle": "A new inquiry regarding medical supplies has been received from the website.",
+        "sectionLabel": "Applicant Details"
+      },
+      "client": {
+        "subject": "We have received your request - {brandName}",
+        "title": "We received your message",
+        "subtitle": "Thank you for reaching out to Mundra. Your message has been assigned to a medical supplies specialist.",
+        "sectionLabel": "Message Summary",
+        "automatedNotice": "This is an automated email confirming receipt of your request. A specialist from our team will review your information and get back to you shortly."
+      },
+      "fields": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "message": "Message Content"
+      },
+      "footer": {
+        "copyright": "© {year} {brandName}. All rights reserved.",
+        "specialty": "Specialized distribution of high-quality medical supplies, equipment, and healthcare products."
+      }
+    }
+  },
+  "header": {
+    "reservations": "Reservations",
+    "aria": {
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "store": "Store",
+      "quote": "Quote Your Experience"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "High-End Tourism",
+      "title1": "Mexico:",
+      "titleGradient": "Your Next Great Experience",
+      "description": "Comprehensive tour plans combining culture, history, nature, and gastronomy with maximum quality and safety.",
+      "cta": "Explore Our Experiences",
+      "imgAlt": "Illustration of a Mexican pyramid"
+    },
+    "about": {
+      "badge": "About Us",
+      "titleLine1": "We create experiences",
+      "titleHighlight": "in Mexico",
+      "p1": "We are a company specialized in the design, planning, and execution of comprehensive tourism experiences within the Mexican Republic. Our focus is on offering high-quality services that combine culture, history, nature, gastronomy, and entertainment, tailored to the needs of each client.",
+      "p2": "We guarantee safe, organized, and enriching experiences, taking care of every detail from planning through to the completion of the service.",
+      "p3": "Our commitment is to turn every journey into a meaningful experience, bringing value, knowledge, and memorable moments to every traveler."
+    },
+    "features": {
+      "titleLine1": "We Transform Journeys into",
+      "titleHighlight": "Memorable Moments",
+      "items": {
+        "strategicItineraries": {
+          "title": "Strategic Itineraries",
+          "text": "Designed based on your interests and profile."
+        },
+        "personalizedAttention": {
+          "title": "Personalized Attention",
+          "text": "Support throughout all stages of the service."
+        },
+        "integralExperiences": {
+          "title": "Comprehensive Experiences",
+          "text": "We fuse culture, recreation, and education."
+        },
+        "qualitySuppliers": {
+          "title": "Quality Suppliers",
+          "text": "Rigorous selection of guides and high-standard services."
+        },
+        "optimizedLogistics": {
+          "title": "Optimized Logistics",
+          "text": "We maximize your time and logistics on every tour."
+        },
+        "adaptability": {
+          "title": "Adaptability",
+          "text": "Solutions for different budgets and traveler types."
+        }
+      }
+    },
+    "whyTrust": {
+      "badge": "Guarantee and Excellence",
+      "titleLine1": "Why trust your trip",
+      "titleHighlight": "with us?",
+      "description": "We stand out by offering structured and reliable tourism solutions, aimed at maximizing your experience through meticulous planning, certified guides, and verified suppliers at every destination.",
+      "cta": "Learn more about us",
+      "imgAlt": "Illustration of Copper Canyon"
+    },
+    "steps": {
+      "badge": "Clear Steps",
+      "titleLine1": "From idea to",
+      "titleHighlight": "flawless execution",
+      "description": "We design personalized experiences to bring the trip of your dreams to reality. Our method combines strategic design with flawless logistics to transform a simple idea into a seamless, safe, and deeply meaningful journey. Here is how we bring your next great story to life:",
+      "cta": "Get a quote now",
+      "items": {
+        "connection": {
+          "title": "Connection",
+          "text": "Everything begins with a conversation. Tell us your interests, tentative dates, and budget; understanding your expectations is the foundation of our travel architecture."
+        },
+        "design": {
+          "title": "Design",
+          "text": "We translate your ideas into a detailed technical proposal. We create a custom itinerary that optimizes time and selects the best suppliers to ensure seamless logistics."
+        },
+        "adjustment": {
+          "title": "Adjustment",
+          "text": "Nothing is final until you decide. We review and optimize every point of the proposal based on your feedback, refining details until the plan feels exactly as you imagined."
+        },
+        "travel": {
+          "title": "Travel",
+          "text": "From paper to reality. Travel with the backing of a team that supervises every stage, providing constant communication and real-time support so your only focus is to enjoy."
+        }
+      }
+    },
+    "conditions": {
+      "titleLine1": "Terms of",
+      "titleHighlight": "service",
+      "subtitle": "To provide you with the best possible experience, here are some important points to consider:",
+      "items": {
+        "availability": "All services are subject to availability at the time of booking",
+        "advanceBooking": "We recommend booking in advance to guarantee your spot",
+        "itineraryAdjustments": "Itineraries may be adjusted due to weather conditions, logistics, or force majeure",
+        "priceVariations": "Prices may vary based on season, demand, or service customizations.",
+        "additionalCosts": "Some experiences or activities may involve additional costs not included in the base package."
+      },
+      "notIncludedTitleLine1": "What is",
+      "notIncludedTitleHighlight": "not included?",
+      "notIncludedSubtitle": "For clarity, these items are not included in the services unless specified otherwise:",
+      "notIncludedItems": {
+        "transport": "Transportation to the meeting point",
+        "foodAndDrinks": "Food and beverages",
+        "tickets": "Entrance fees to tourist, cultural, or archaeological sites",
+        "personalExpenses": "Personal expenses during the tour",
+        "tips": "Tips for guides or service staff",
+        "extraActivities": "Additional activities not specified in the itinerary"
+      }
+    },
+    "categories": {
+      "titleLine1": "Explore Mexico's",
+      "titleHighlight": "Infinite Array",
+      "description": "We design experiences that transcend the conventional. From the depths of history to the energy of our coasts.",
+      "imgAlt": "Illustration of a Mexican wrestler",
+      "items": {
+        "heritage": {
+          "title": "Heritage & Cultural Legacy",
+          "text": "Tours in historic centers and heritage zones. Immerse yourself in the architecture and chronicles that shaped our identity."
+        },
+        "ecoAdventure": {
+          "title": "Eco-Adventure & Nature",
+          "text": "Adventure and ecotourism activities. From Copper Canyon to Micos Waterfalls; nature in its purest state."
+        },
+        "pastTraces": {
+          "title": "Traces of the Past",
+          "text": "Archaeological site tours. Guided visits to iconic sites with an educational and respectful approach."
+        },
+        "horizons": {
+          "title": "Pacific & Caribbean Horizons",
+          "text": "Beach tours and water activities. Relaxation and adrenaline on the country's most beautiful coasts, such as Mazatlán's iconic boardwalk."
+        },
+        "flavorRoutes": {
+          "title": "Flavor Routes",
+          "text": "Gastronomic experiences and wine routes. A sensory journey through markets, signature kitchens, and the most exclusive vineyards."
+        },
+        "urbanPulse": {
+          "title": "Urban Pulse & Art",
+          "text": "Artistic and nightlife experiences. The sophistication of Mexican cities through their museums, galleries, and cosmopolitan life."
+        }
+      }
+    },
+    "notice": {
+      "p1": "All our services are subject to availability, so we recommend making your reservation at least 7 days in advance.",
+      "p2": "One of our advisors will contact you to confirm availability or, if necessary, assist you with proposing new dates that suit your needs."
+    }
+  },
+  "footer": {
+    "securePayments": "Secure payments",
+    "paymentMethodsAlt": "Visa, Mastercard",
+    "copyright": "{year} Mundra. All rights reserved.",
+    "tagline": "Unforgettable tourist experiences throughout the Mexican Republic.",
+    "links": {
+      "privacyPolicy": "Privacy Policy",
+      "termsAndReturns": "Terms & Returns",
+      "refundPolicy": "Refund & Return Policy"
+    }
+  },
+  "contactForm": {
+    "fields": {
+      "fullName": "Full name",
+      "email": "Email address",
+      "phone": "Contact phone",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Write your message *"
+    },
+    "buttons": {
+      "send": "Send message",
+      "sending": "Sending...",
+      "sent": "Sent"
+    },
+    "feedback": {
+      "success": "Thank you! Your message has been sent successfully.",
+      "errorDefault": "An error occurred while sending your message."
+    },
+    "info": {
+      "badge": "Direct Contact",
+      "titleLine1": "We are here to",
+      "titleLine2": "listen to you",
+      "description": "Do you have any questions about our services or need details regarding a booking? Fill out the form and our team will respond promptly."
+    }
+  },
+  "cotizaPage": {
+    "metadata": {
+      "title": "Quote Your Experience | Mundra",
+      "description": "Tell us your interests, dates, and budget, and we will design a tailor-made itinerary for you."
+    },
+    "hero": {
+      "badge": "Tailor-made design",
+      "titleLine1": "Let's design your",
+      "titleLine2": "Ideal Journey",
+      "description": "From concept to logistical execution; we create unique itineraries aligned with your profile, pace, and expectations in Mexico."
+    },
+    "philosophy": {
+      "badge": "Personalized Planning",
+      "titleLine1": "Let's Start Designing Your",
+      "titleLine2": "Ideal Journey",
+      "description": "At Planes Turísticos México, we understand that true luxury in modern travel is not just the destination, but the relevance of the experience. We believe every journey should be a true reflection of the traveler, which is why we offer our strategic design expertise to craft trips tailored to your personal vision.",
+      "features": {
+        "securityTitle": "Guaranteed Security",
+        "securityDesc": "Logistical operations verified in the field.",
+        "flexibilityTitle": "Total Flexibility",
+        "flexibilityDesc": "Adapted to your dates and preferred pace."
+      }
+    },
+    "howItWorks": {
+      "title": "How does it work?",
+      "step1": "Fill out your date and budget preferences in the form.",
+      "step2": "A specialist designs a logistical proposal tailored to you.",
+      "step3": "Receive your reservation ID ready to confirm your spot."
+    },
+    "checkout": {
+      "titleLine1": "Finalize your booking and",
+      "titleLine2": "secure your spot",
+      "description": "If you already have a personalized quote and have reviewed your itinerary details, you are just one step away from securing your experience. Enter the Documentation ID provided by our team to proceed with the secure payment of your service.",
+      "button": "Pay quote"
+    }
+  },
+  "advancedContactForm": {
+    "badge": "Design Your Experience",
+    "titleStart": "Let's design your",
+    "titleHighlight": "ideal trip",
+    "subtitle": "Fill in the details of your desired itinerary and we will prepare a tailored proposal for you.",
+    "fields": {
+      "fullName": {
+        "label": "Full name",
+        "placeholder": "E.g. María González"
+      },
+      "origin": {
+        "label": "State / City of origin",
+        "placeholder": "E.g. CDMX, New York..."
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "you@email.com"
+      },
+      "phone": {
+        "label": "Phone / WhatsApp",
+        "placeholder": "E.g. +1 555 123 4567"
+      },
+      "destination": {
+        "label": "Destination of interest",
+        "placeholder": "E.g. Riviera Maya, Oaxaca..."
+      },
+      "date": {
+        "label": "Estimated date"
+      },
+      "travelers": {
+        "label": "Occupants / Travelers",
+        "placeholder": "E.g. 2 adults, 1 child"
+      },
+      "details": {
+        "label": "Tell us about your ideal trip / Additional details",
+        "placeholder": "E.g. We would like to include a culinary tour, ocean view hotel, and private transfers..."
+      }
+    },
+    "buttons": {
+      "send": "Get Trip Quote",
+      "processing": "Processing Quote...",
+      "sent": "Quote Sent"
+    },
+    "feedback": {
+      "success": "Thank you! Your quote request has been sent successfully.",
+      "errorDefault": "There was a problem processing your quote. Please try again."
+    },
+    "emailFormat": {
+      "subjectPrefix": "Quote Request",
+      "defaultDestination": "Tailor-made trip",
+      "header": "TRIP QUOTE REQUEST",
+      "clientData": "CLIENT DETAILS",
+      "name": "Name",
+      "origin": "Origin (State/City)",
+      "email": "Email",
+      "phone": "Phone",
+      "tripDetails": "TRIP DETAILS",
+      "destination": "Destination of interest",
+      "date": "Estimated date",
+      "travelers": "Occupants / Travelers",
+      "additionalNotes": "TELL US ABOUT YOUR IDEAL TRIP / ADDITIONAL NOTES",
+      "notSpecified": "Not specified",
+      "noDetails": "No additional details."
+    }
+  },
+  "aboutUs": {
+    "hero": {
+      "badge": "Mundra",
+      "titleHighlight": "Your Most Trusted Guide",
+      "titleRest": "in Mexico",
+      "description": "In a country of infinite contrasts, travel is an art that requires precision. We are a specialized company transforming conventional tourism into meaningful life experiences. Our mission is simple: take care of every detail, from initial planning to service completion, so your only task is to connect with the essence of Mexico."
+    },
+    "architects": {
+      "badge": "Nationwide Coverage",
+      "titleStart": "Architects of Experiences across the",
+      "titleHighlight": "Mexican Republic.",
+      "paragraph1": "We are a specialized agency creating comprehensive travel experiences across Mexico. Our focus goes beyond driving you to a destination; we deliver high-quality services intertwining culture, history, nature, gastronomy, and entertainment.",
+      "paragraph2": "We are passionate about detailing every step, from early planning to service conclusion, ensuring safe, organized, and deeply enriching itineraries.",
+      "paragraph3": "Our commitment is to turn every journey into a meaningful journey providing authentic value, deep knowledge, and unforgettable memories for every traveler.",
+      "imageAlt": "Palace of Fine Arts"
+    },
+    "values": {
+      "titleStart": "What defines",
+      "titleHighlight": "us",
+      "subtitle": "Our operational pillars guarantee excellence at every step of your Mexican journey.",
+      "items": [
+        {
+          "title": "Field Expertise",
+          "text": "Close collaboration with certified guides and highly trained personnel selected for their cultural knowledge and dedication to service."
+        },
+        {
+          "title": "Logistical Architecture",
+          "text": "We conduct detailed and preventive planning to anticipate variables and avoid unforeseen disruptions to your itinerary."
+        },
+        {
+          "title": "Precision and Punctuality",
+          "text": "We strictly adhere to planned schedules, respecting the value of your time at every destination."
+        },
+        {
+          "title": "360° Support",
+          "text": "Constant communication before, during, and after your trip, offering real-time assistance whenever needed."
+        },
+        {
+          "title": "Certification of Trust",
+          "text": "Continuous evaluation of top-tier vendors with an unwavering focus on traveler safety and well-being."
+        }
+      ]
+    },
+    "philosophy": {
+      "badge": "Our Philosophy",
+      "title": "What drives us?",
+      "prevSlide": "Previous",
+      "nextSlide": "Next"
+    },
+    "slides": {
+      "mission": {
+        "category": "Mission",
+        "quote": "“Transforming tourism in Mexico into meaningful life experiences.”",
+        "description": "Our mission is to design, plan, and execute high-quality comprehensive travel services blending culture, history, nature, and gastronomy. We commit to meticulously managing all logistics to guarantee safe, enriching, and tailored journeys."
+      },
+      "vision": {
+        "category": "Vision",
+        "quote": "“To be the leading benchmark in custom travel design in Mexico, recognized for operational excellence and innovation.”",
+        "description": "We aspire to solidify our position as the preferred choice for travelers seeking exclusivity and structure, leveraging an elite supplier network and cutting-edge logistical technology."
+      },
+      "objectives": {
+        "category": "Strategic Objectives",
+        "quote": "“To fulfill our identity, we commit to the following goals of excellence:”",
+        "list": [
+          "Excellence in Customization",
+          "Logistical Optimization",
+          "Safety & Trust Guarantee",
+          "Educational & Cultural Quality",
+          "Adaptability & Scalability",
+          "Satisfaction & Loyalty"
+        ]
+      }
+    },
+    "contactSection": {
+      "titleStart": "Ready for your",
+      "titleHighlight": "next great story",
+      "subtitle": "All our services are subject to availability; we recommend booking at least 7 days in advance. An advisor will contact you shortly."
+    }
+  },
+  "toursPage": {
+    "hero": {
+      "badge": "Experience Catalog",
+      "titleStart": "Discover your",
+      "titleHighlight": "next destination",
+      "description": "Explore unique experiences tailored for every type of traveler. From cultural destinations and natural adventures to culinary escapes and exclusive tours.",
+      "noticeTitle": "Important Notice",
+      "noticeText": "All our services are subject to availability. We recommend booking at least",
+      "noticeHighlight": "7 days in advance",
+      "noticeAction": "An advisor will contact you to confirm dates."
+    },
+    "filters": {
+      "title": "Filters",
+      "reset": "Reset",
+      "searchLabel": "Search by title",
+      "searchPlaceholder": "E.g. Monte Alban...",
+      "stateLabel": "State / Region",
+      "allStates": "All states",
+      "minPriceLabel": "Minimum Price ($MXN)",
+      "minPricePlaceholder": "E.g. 500",
+      "sortLabel": "Sort by",
+      "sortOptions": {
+        "newest": "Newest",
+        "priceAsc": "Price: Low to High",
+        "priceDesc": "Price: High to Low",
+        "durationAsc": "Duration: Short to Long",
+        "durationDesc": "Duration: Long to Short",
+        "titleAsc": "Name: A - Z",
+        "titleDesc": "Name: Z - A"
+      }
+    },
+    "results": {
+      "showing": "Showing",
+      "of": "of",
+      "experiences": "experiences",
+      "page": "Page",
+      "ofPage": "of"
+    },
+    "states": {
+      "errorTitle": "There was a problem loading the tours",
+      "retry": "Retry",
+      "emptyTitle": "No experiences found",
+      "emptySubtitle": "Try changing your search criteria or reset filters to explore more options."
+    },
+    "card": {
+      "featured": "Featured",
+      "hours": "hrs",
+      "from": "From",
+      "viewDetails": "View Details"
+    },
+    "pagination": {
+      "prev": "Previous page",
+      "next": "Next page"
+    }
+  },
+  "tourDetailPage": {
+    "states": {
+      "loading": "Loading experience...",
+      "notFoundTitle": "Tour not found",
+      "notFoundDescription": "We couldn't find the experience you are looking for. The link might be incorrect or the tour is no longer available.",
+      "exploreOtherTours": "Explore other tours",
+      "errorTitle": "Error loading experience",
+      "retry": "Retry"
+    },
+    "breadcrumb": {
+      "backToTours": "Back to all tours"
+    },
+    "hero": {
+      "featuredBadge": "Featured Experience"
+    },
+    "details": {
+      "location": "Location",
+      "duration": "Duration",
+      "hours": "hours",
+      "highlightsTitle": "What you will experience"
+    },
+    "itinerary": {
+      "title": "Detailed Itinerary",
+      "noteLabel": "Note"
+    },
+    "includesExcludes": {
+      "includesTitle": "What's included",
+      "excludesTitle": "What's not included",
+      "notSpecified": "Not specified"
+    },
+    "booking": {
+      "pricePerPerson": "Price per person",
+      "dateLabel": "Reservation date",
+      "peopleLabel": "Number of guests",
+      "personSingular": "guest",
+      "personPlural": "guests",
+      "estimatedTotal": "Estimated total",
+      "addToCart": "Add to Cart",
+      "addedSuccess": "Added to Cart!"
+    },
+    "logistics": {
+      "startTime": "Meeting time",
+      "meetingPoint": "Meeting point"
+    },
+    "related": {
+      "subheading": "Keep exploring",
+      "heading": "Similar experiences in",
+      "viewAll": "View all",
+      "from": "From",
+      "viewDetails": "View details"
+    }
+  }
+}
