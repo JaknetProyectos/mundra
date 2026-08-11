@@ -102,7 +102,7 @@ export default function TourDetailPage() {
           </p>
           <Link
             className="w-full py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold rounded-2xl shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 transition-all active:scale-95 text-center text-sm"
-            href="/tours"
+            href="/producto"
           >
             {t("states.exploreOtherTours")}
           </Link>
@@ -143,7 +143,7 @@ export default function TourDetailPage() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
         <Link
           className="inline-flex items-center gap-2 text-xs font-bold text-purple-900 hover:text-orange-500 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full border border-purple-100 shadow-sm transition-all hover:translate-x-1"
-          href="/tours"
+          href="/producto"
         >
           <ArrowLeft className="h-4 w-4 text-orange-500" />
           {t("breadcrumb.backToTours")}
@@ -452,7 +452,7 @@ export default function TourDetailPage() {
                 </h2>
               </div>
               <Link
-                href="/tours"
+                href="/producto"
                 className="inline-flex items-center gap-1 text-xs font-bold text-purple-900 hover:text-orange-500 transition-colors"
               >
                 {t("related.viewAll")} <ChevronRight className="h-4 w-4 text-orange-500" />
@@ -511,7 +511,7 @@ export default function TourDetailPage() {
                           </span>
                         </div>
                         <Link
-                          href={`/tours/${item.slug}`}
+                          href={`/producto/${item.slug}`}
                           className="px-3.5 py-2 bg-purple-50 text-purple-950 hover:bg-orange-500 hover:text-white text-xs font-bold rounded-xl transition-all shadow-sm"
                         >
                           {t("related.viewDetails")}

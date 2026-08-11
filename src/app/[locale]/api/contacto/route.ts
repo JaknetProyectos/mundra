@@ -5,9 +5,9 @@ import { getTranslations } from "next-intl/server";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const SUPPORT_EMAIL = "info@curalia.com.mx";
-const BRAND_NAME = "Curalia";
-const BRAND_URL = "curalia.com.mx";
-const BRAND_LOGO = "https://curalia.com.mx/title-logo.png";
+const BRAND_NAME = "Mundra";
+const BRAND_URL = "https://mundra.com.mx/es";
+const BRAND_LOGO = "https://mundra.com.mx/logo-title.png";
 
 // Campos estándar para filtrarlos en la sección de "Campos adicionales"
 const STANDARD_FIELDS = ["nombre", "email", "mensaje", "asunto", "locale"];
@@ -172,7 +172,7 @@ function renderEmailTemplate({
           padding: 36px 24px 24px 24px; 
           text-align: center; 
           border-bottom: 1px solid ${theme.containerBorder}; 
-          background-color: ${theme.headerBg}; 
+          background-color: #FFFFFF; 
         }
         .logo { 
           height: 36px; 

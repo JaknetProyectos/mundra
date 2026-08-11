@@ -140,33 +140,33 @@
   },
   "Emails": {
     "checkout": {
-      "errorMissingFields": "Faltan campos requeridos para procesar la orden",
+      "errorMissingFields": "Faltan campos requeridos para procesar su reserva",
       "errorSending": "Error interno del servidor",
       "client": {
-        "subject": "Recibo de compra #{orderId} - {brandName}",
-        "title": "Confirmación de Compra",
-        "subtitle": "Agradecemos su preferencia. Su orden #{orderId} ha sido procesada con éxito y hemos comenzado la preparación y empaque de sus insumos médicos."
+        "subject": "Confirmación de su reserva #{orderId} - {brandName}",
+        "title": "¡Reserva Confirmada!",
+        "subtitle": "¡Estamos emocionados de tenerte con nosotros! Tu reserva #{orderId} ha sido procesada con éxito y estamos preparando todo para que disfrutes de una experiencia inolvidable."
       },
       "business": {
-        "subject": "[Venta] Orden #{orderId} - ${amount} MXN",
-        "title": "Nueva Venta Procesada",
-        "subtitle": "Se ha registrado un nuevo pago exitoso por un monto de ${amount} MXN correspondiente a insumos y equipo médico."
+        "subject": "[Reserva] Orden #{orderId} - ${amount} MXN",
+        "title": "Nueva Reserva Registrada",
+        "subtitle": "Se ha registrado un nuevo pago exitoso por un monto de ${amount} MXN correspondiente a servicios turísticos y experiencias."
       },
       "labels": {
-        "orderId": "ID de Orden",
+        "orderId": "ID de Reserva",
         "paymentDate": "Fecha de Pago",
-        "buyerInfo": "Información del Comprador",
+        "buyerInfo": "Información del Viajero",
         "billingDetails": "Detalles de Facturación",
-        "customer": "Cliente",
-        "address": "Dirección de Entrega",
-        "company": "Institución / Empresa",
-        "operationDetails": "Detalles de la Operación",
-        "modulesSummary": "Resumen de Productos y Materiales",
+        "customer": "Viajero",
+        "address": "Dirección de Contacto",
+        "company": "Agencia / Colaborador",
+        "operationDetails": "Detalles del Viaje",
+        "modulesSummary": "Resumen de Servicios y Actividades",
         "totalPaid": "Total Pagado"
       },
       "footer": {
         "copyright": "© {year} {brandName}. Todos los derechos reservados.",
-        "specialty": "Distribución especializada de insumos, equipo médico y material de curación de alta calidad."
+        "specialty": "Operadora turística especializada en experiencias únicas, viajes personalizados y servicios de alta calidad."
       }
     },
     "contact": {
@@ -174,25 +174,25 @@
       "errorSending": "Error interno del servidor",
       "business": {
         "subject": "[Contacto] {asunto} - {nombre}",
-        "title": "Nueva Solicitud de Contacto",
-        "subtitle": "Se ha recibido una nueva consulta de insumos médicos desde el sitio web.",
+        "title": "Nueva Consulta Turística",
+        "subtitle": "Se ha recibido una nueva solicitud de información o cotización de viaje desde el sitio web.",
         "sectionLabel": "Detalles del Solicitante"
       },
       "client": {
-        "subject": "Recibimos su solicitud - {brandName}",
+        "subject": "Recibimos su solicitud de viaje - {brandName}",
         "title": "Hemos recibido su mensaje",
-        "subtitle": "Gracias por comunicarse con Mundra. Su mensaje ha sido asignado a un asesor especializado en insumos médicos.",
+        "subtitle": "Gracias por comunicarse con nosotros. Su mensaje ha sido asignado a un asesor especializado en diseño de experiencias y viajes.",
         "sectionLabel": "Resumen de su Mensaje",
-        "automatedNotice": "Este es un correo automatizado confirmando la recepción de su solicitud. Un especialista de nuestro equipo revisará la información y se pondrá en contacto a la brevedad."
+        "automatedNotice": "Este es un correo automatizado confirmando la recepción de su solicitud. Un experto en viajes revisará sus preferencias y se pondrá en contacto a la brevedad."
       },
       "fields": {
         "name": "Nombre Completo",
         "email": "Correo Electrónico",
-        "message": "Mensaje enviado"
+        "message": "Detalles de su consulta"
       },
       "footer": {
         "copyright": "© {year} {brandName}. Todos los derechos reservados.",
-        "specialty": "Distribución especializada de insumos, equipo médico y material de curación de alta calidad."
+        "specialty": "Operadora turística especializada en experiencias únicas, viajes personalizados y servicios de alta calidad."
       }
     }
   },

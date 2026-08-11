@@ -140,33 +140,33 @@
   },
   "Emails": {
     "checkout": {
-      "errorMissingFields": "Required fields are missing to process the order",
+      "errorMissingFields": "Required fields are missing to process your booking",
       "errorSending": "Internal server error",
       "client": {
-        "subject": "Purchase Receipt #{orderId} - {brandName}",
-        "title": "Order Confirmation",
-        "subtitle": "Thank you for your business. Your order #{orderId} has been successfully processed, and we have begun preparing your medical supplies."
+        "subject": "Booking Confirmation #{orderId} - {brandName}",
+        "title": "Booking Confirmed!",
+        "subtitle": "We are excited to have you with us! Your booking #{orderId} has been successfully processed, and we are preparing everything for you to enjoy an unforgettable experience."
       },
       "business": {
-        "subject": "[Sale] Order #{orderId} - ${amount} MXN",
-        "title": "New Sale Processed",
-        "subtitle": "A new successful payment of ${amount} MXN has been registered for medical supplies and equipment."
+        "subject": "[Booking] Order #{orderId} - ${amount} MXN",
+        "title": "New Booking Processed",
+        "subtitle": "A new successful payment of ${amount} MXN has been registered for travel services and experiences."
       },
       "labels": {
-        "orderId": "Order ID",
+        "orderId": "Booking ID",
         "paymentDate": "Payment Date",
-        "buyerInfo": "Buyer Information",
+        "buyerInfo": "Traveler Information",
         "billingDetails": "Billing Details",
-        "customer": "Customer",
-        "address": "Shipping Address",
-        "company": "Institution / Company",
-        "operationDetails": "Transaction Details",
-        "modulesSummary": "Products and Items Summary",
+        "customer": "Traveler",
+        "address": "Contact Address",
+        "company": "Agency / Partner",
+        "operationDetails": "Trip Details",
+        "modulesSummary": "Services and Activities Summary",
         "totalPaid": "Total Paid"
       },
       "footer": {
         "copyright": "© {year} {brandName}. All rights reserved.",
-        "specialty": "Specialized distribution of high-quality medical supplies, equipment, and healthcare products."
+        "specialty": "Tour operator specialized in unique experiences, personalized travel, and high-quality services."
       }
     },
     "contact": {
@@ -174,25 +174,25 @@
       "errorSending": "Internal server error",
       "business": {
         "subject": "[Inquiry] {asunto} - {nombre}",
-        "title": "New Contact Inquiry",
-        "subtitle": "A new inquiry regarding medical supplies has been received from the website.",
+        "title": "New Travel Inquiry",
+        "subtitle": "A new inquiry regarding travel information or quotes has been received from the website.",
         "sectionLabel": "Applicant Details"
       },
       "client": {
-        "subject": "We have received your request - {brandName}",
+        "subject": "We have received your travel request - {brandName}",
         "title": "We received your message",
-        "subtitle": "Thank you for reaching out to Mundra. Your message has been assigned to a medical supplies specialist.",
+        "subtitle": "Thank you for reaching out to us. Your message has been assigned to a travel experience design specialist.",
         "sectionLabel": "Message Summary",
-        "automatedNotice": "This is an automated email confirming receipt of your request. A specialist from our team will review your information and get back to you shortly."
+        "automatedNotice": "This is an automated email confirming receipt of your request. A travel expert will review your preferences and get back to you shortly."
       },
       "fields": {
         "name": "Full Name",
         "email": "Email Address",
-        "message": "Message Content"
+        "message": "Inquiry Details"
       },
       "footer": {
         "copyright": "© {year} {brandName}. All rights reserved.",
-        "specialty": "Specialized distribution of high-quality medical supplies, equipment, and healthcare products."
+        "specialty": "Tour operator specialized in unique experiences, personalized travel, and high-quality services."
       }
     }
   },

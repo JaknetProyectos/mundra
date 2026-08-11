@@ -1,13 +1,14 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { getTranslations } from "next-intl/server";
+import { formatPrice } from "@/lib/format-price";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const SUPPORT_EMAIL = "info@curalia.com.mx";
-const BRAND_NAME = "Curalia";
-const BRAND_URL = "https://curalia.com.mx";
-const BRAND_LOGO = "https://curalia.com.mx/title-logo.png";
+const BRAND_NAME = "Mundra";
+const BRAND_URL = "https://mundra.com.mx/es";
+const BRAND_LOGO = "https://mundra.com.mx/logo-title.png";
 
 // 1. Interfaces para tipado estricto
 interface Customer {
@@ -29,7 +30,7 @@ interface OrderItem {
     title: string;
     price: number | string;
   };
-  quantity?: number;
+  people?: number;
 }
 
 interface CheckoutBody {
@@ -139,48 +140,62 @@ function renderReceiptTemplate({
   // Configuración de paletas de color
   const theme = isBusiness
     ? {
-        bodyBg: "#09090b",
-        containerBg: "#18181b",
-        containerBorder: "#27272a",
-        headerBg: "#09090b",
-        textColor: "#ffffff",
-        textMuted: "#a1a1aa",
-        cardBg: "#09090b",
-        cardBorder: "#27272a",
-        dashedBorder: "#3f3f46",
-        labelColor: "#f97316",
-        accentColor: "#f97316",
-        totalLabelColor: "#ffffff",
-        totalAmountColor: "#f97316",
-        badgeBg: "rgba(249, 115, 22, 0.15)",
-        badgeText: "#fb923c",
-        footerBg: "#09090b",
-        footerLink: "#f97316",
-      }
+      // Modo Oscuro (Business/Admin) - Contraste profundo
+      bodyBg: "#09090b",
+      containerBg: "#18181b",
+      containerBorder: "#3f3f46", // Ligeramente más claro para separar
+      headerBg: "#18181b",
+      textColor: "#ffffff",
+      textMuted: "#a1a1aa",
+      cardBg: "#09090b",
+      cardBorder: "#27272a",
+      dashedBorder: "#3f3f46",
+
+      // Morado para etiquetas y énfasis sutil
+      labelColor: "#a855f7",
+      accentColor: "#f97316", // Naranja para llamadas a la acción
+
+      totalLabelColor: "#ffffff",
+      totalAmountColor: "#f97316",
+
+      // Badge mezcla: fondo morado suave, texto naranja vibrante
+      badgeBg: "rgba(168, 85, 247, 0.15)",
+      badgeText: "#d8b4fe",
+
+      footerBg: "#09090b",
+      footerLink: "#a855f7",
+    }
     : {
-        bodyBg: "#f4f4f5",
-        containerBg: "#ffffff",
-        containerBorder: "#e4e4e7",
-        headerBg: "#ffffff",
-        textColor: "#09090b",
-        textMuted: "#71717a",
-        cardBg: "#fafafa",
-        cardBorder: "#e4e4e7",
-        dashedBorder: "#d4d4d8",
-        labelColor: "#f97316",
-        accentColor: "#ea580c",
-        totalLabelColor: "#09090b",
-        totalAmountColor: "#ea580c",
-        badgeBg: "rgba(249, 115, 22, 0.1)",
-        badgeText: "#c2410c",
-        footerBg: "#fafafa",
-        footerLink: "#f97316",
-      };
+      // Modo Claro (Cliente) - Limpio con acentos orgánicos
+      bodyBg: "#f4f4f5",
+      containerBg: "#ffffff",
+      containerBorder: "#e4e4e7",
+      headerBg: "#ffffff",
+      textColor: "#09090b",
+      textMuted: "#71717a",
+      cardBg: "#fcfcfc",
+      cardBorder: "#e4e4e7",
+      dashedBorder: "#d4d4d8",
+
+      // Morado para secciones descriptivas, Naranja para precios/acciones
+      labelColor: "#7e22ce",
+      accentColor: "#ea580c",
+
+      totalLabelColor: "#09090b",
+      totalAmountColor: "#ea580c",
+
+      // Badge: fondo morado muy claro, texto morado oscuro
+      badgeBg: "rgba(168, 85, 247, 0.1)",
+      badgeText: "#6b21a8",
+
+      footerBg: "#fafafa",
+      footerLink: "#7e22ce",
+    };
 
   const currentYear = new Date().getFullYear();
   const localeFormat = locale === "en" ? "en-US" : "es-MX";
-  const formattedDate = new Date().toLocaleDateString(localeFormat, { 
-    timeZone: "America/Mexico_City" 
+  const formattedDate = new Date().toLocaleDateString(localeFormat, {
+    timeZone: "America/Mexico_City"
   });
 
   return `
@@ -369,29 +384,29 @@ function renderReceiptTemplate({
             <div class="section-label">${t("labels.modulesSummary")}</div>
             <div class="ticket-box">
               ${items.map((item) => {
-                const itemPrice = Number(item.product.price) || 0;
-                const qty = item.quantity || 1;
-                const totalLine = (itemPrice * qty).toFixed(2);
-                
-                return `
+    const itemPrice = Number(item.product.price) || 0;
+    const qty = item.people || 1;
+    const totalLine = (itemPrice * qty);
+
+    return `
                 <div class="ticket-row">
                   <div class="item-name">
                     ${item.product.title}
                     <span class="item-qty">x${qty}</span>
                   </div>
                   <div class="item-price">
-                    $${totalLine} MXN
+                    $${formatPrice(Number(totalLine))} MXN
                   </div>
                 </div>
               `}).join('')}
               
               <div class="ticket-row total-box">
                 <div class="item-name total-label">${t("labels.totalPaid")}</div>
-                <div class="item-price total-amount">$${amount.toFixed(2)} MXN</div>
+                <div class="item-price total-amount">$${formatPrice(amount)} MXN</div>
               </div>
             </div>
 
-          </div>
+          </div>p?: numb
 
           <div class="footer">
             ${t("footer.copyright", { year: currentYear, brandName: BRAND_NAME }).replace(BRAND_NAME, `<a href="${BRAND_URL}">${BRAND_NAME}</a>`)}<br/>
