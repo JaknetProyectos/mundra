@@ -5,7 +5,7 @@ import { formatPrice } from "@/lib/format-price";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const SUPPORT_EMAIL = "info@curalia.com.mx";
+const SUPPORT_EMAIL = "hello@mundra.com.mx";
 const BRAND_NAME = "Mundra";
 const BRAND_URL = "https://mundra.com.mx/es";
 const BRAND_LOGO = "https://mundra.com.mx/logo-title.png";
