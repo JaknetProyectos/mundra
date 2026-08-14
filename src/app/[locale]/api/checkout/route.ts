@@ -406,7 +406,7 @@ function renderReceiptTemplate({
               </div>
             </div>
 
-          </div>p?: numb
+          </div>
 
           <div class="footer">
             ${t("footer.copyright", { year: currentYear, brandName: BRAND_NAME }).replace(BRAND_NAME, `<a href="${BRAND_URL}">${BRAND_NAME}</a>`)}<br/>
