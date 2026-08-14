@@ -23,6 +23,7 @@ import {
   CalendarCheck,
   Zap,
 } from "lucide-react";
+import { getOptimizedUrl } from "@/lib/images";
 
 export default function ToursPage() {
   const t = useTranslations("toursPage");
@@ -36,7 +37,7 @@ export default function ToursPage() {
   const [sortBy, setSortBy] = useState<"newest" | "price" | "duration" | "title">("newest");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
 
-  const limit = 12; // Tours por página
+  const limit = 10; // Tours por página
 
   // Objeto de filtros memoizado para el hook
   const filters: UseToursFilters = {
@@ -62,7 +63,7 @@ export default function ToursPage() {
     setSearch("");
     setSelectedState("");
     setMinPrice(undefined);
-    setSortBy("newest");
+    setSortBy("title");
     setSortOrder("desc");
     setPage(1);
   };
@@ -300,7 +301,7 @@ export default function ToursPage() {
                     {/* IMAGEN DEL TOUR */}
                     <div className="relative h-56 w-full bg-slate-100 overflow-hidden">
                       <Image
-                        src={tour.image}
+                        src={getOptimizedUrl(tour.image)}
                         alt={tour.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -308,10 +309,12 @@ export default function ToursPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-950/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                      <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-purple-950 text-xs font-extrabold px-3 py-1 rounded-full border border-purple-100 shadow-sm flex items-center gap-1">
-                        <MapPin className="h-3.5 w-3.5 text-orange-500" />
-                        {tour.state.toUpperCase()}
-                      </span>
+                      {tour.state.toUpperCase() != "SIN-CATEGORIZAR" &&
+                        <span className="absolute top-4 left-4 bg-white/95 backdrop-blur-md text-purple-950 text-xs font-extrabold px-3 py-1 rounded-full border border-purple-100 shadow-sm flex items-center gap-1">
+                          <MapPin className="h-3.5 w-3.5 text-orange-500" />
+                          {tour.state.toUpperCase()}
+                        </span>
+                      }
 
                       {tour.featured && (
                         <span className="absolute top-4 right-4 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md flex items-center gap-1">
@@ -325,10 +328,12 @@ export default function ToursPage() {
                     <div className="p-6 flex-1 flex flex-col justify-between space-y-5">
                       <div className="space-y-2">
                         <div className="flex items-center justify-between text-xs font-semibold text-slate-500">
-                          <span className="flex items-center gap-1">
-                            <Clock className="h-3.5 w-3.5 text-purple-600" />
-                            {tour.durationHours} {t("card.hours")}
-                          </span>
+                          {tour.durationHours > 0 &&
+                            <span className="flex items-center gap-1">
+                              <Clock className="h-3.5 w-3.5 text-purple-600" />
+                              {tour.durationHours} {t("card.hours")}
+                            </span>
+                          }
                         </div>
 
                         <h3 className="text-xl font-bold text-purple-950 group-hover:text-orange-600 transition-colors line-clamp-1">
@@ -344,13 +349,21 @@ export default function ToursPage() {
                       {/* PRECIO Y ACCIÓN */}
                       <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                         <div>
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
-                            {t("card.from")}
-                          </span>
-                          <span className="text-2xl font-black text-purple-950">
-                            ${tour.price.toLocaleString(locale === "en" ? "en-US" : "es-MX")}{" "}
-                            <small className="text-xs font-semibold text-slate-500">MXN</small>
-                          </span>
+
+                          {
+                            tour.price > 0 &&
+
+                            <>
+                              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
+                                {t("card.from")}
+                              </span>
+
+                              <span className="text-2xl font-black text-purple-950">
+                                ${tour.price.toLocaleString(locale === "en" ? "en-US" : "es-MX")}{" "}
+                                <small className="text-xs font-semibold text-slate-500">MXN</small>
+                              </span>
+                            </>
+                          }
                         </div>
                         <Link
                           href={`/producto/${tour.slug}`}
@@ -382,11 +395,10 @@ export default function ToursPage() {
                     <button
                       key={pageNum}
                       onClick={() => setPage(pageNum)}
-                      className={`w-10 h-10 text-xs rounded-full font-bold transition-all ${
-                        page === pageNum
-                          ? "bg-purple-950 text-white shadow-md shadow-purple-950/20 scale-105"
-                          : "bg-white text-slate-700 border border-purple-100 hover:bg-orange-50"
-                      }`}
+                      className={`w-10 h-10 text-xs rounded-full font-bold transition-all ${page === pageNum
+                        ? "bg-purple-950 text-white shadow-md shadow-purple-950/20 scale-105"
+                        : "bg-white text-slate-700 border border-purple-100 hover:bg-orange-50"
+                        }`}
                     >
                       {pageNum}
                     </button>

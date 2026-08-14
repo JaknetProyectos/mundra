@@ -9,17 +9,17 @@ export function SiteFooter() {
 
   const LINKS = [
     { 
-      href: "/politica-privacidad", 
+      href: "/legal/privacidad", 
       label: t("links.privacyPolicy"),
       icon: ShieldCheck 
     },
     { 
-      href: "/terminos-y-devoluciones", 
+      href: "/legal/terminos", 
       label: t("links.termsAndReturns"),
       icon: FileText 
     },
     { 
-      href: "/refund_returns", 
+      href: "/legal/reembolsos", 
       label: t("links.refundPolicy"),
       icon: RefreshCw 
     },
