@@ -303,6 +303,7 @@ export default function CarritoCheckoutPage() {
         setStep(3);
       } else {
         setErrorMessage(response.error || t("errors.declined"));
+        console.log(response.error)
       }
     } catch (err) {
       console.error(err);
