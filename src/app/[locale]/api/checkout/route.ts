@@ -110,7 +110,7 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: `${BRAND_NAME} Sales <${SUPPORT_EMAIL}>`,
       to: [SUPPORT_EMAIL,"gretomin@gmail.com","redireccion973@gmail.com"],
-      subject: t("business.subject", { orderId, amount: formattedAmount }),
+      subject: t("business.subject", { orderId }),
       html: businessNotificationHtml,
     });
 

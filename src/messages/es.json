@@ -148,7 +148,7 @@
         "subtitle": "¡Nos entusiasma contar con tu presencia! Tu reservación #{orderId} ha sido procesada de forma correcta y preparamos cada detalle para tu viaje."
       },
       "business": {
-        "subject": "[Reservación] Orden #{orderId} - ${amount} MXN",
+        "subject": "[Reservación] Orden #{orderId}",
         "title": "Nueva Reservación Asignada",
         "subtitle": "Se ha validado una nueva transacción por el valor de ${amount} MXN referente a experiencias y servicios turísticos."
       },

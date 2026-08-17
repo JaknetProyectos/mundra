@@ -148,7 +148,7 @@
         "subtitle": "We are excited to have you with us! Your booking #{orderId} has been successfully processed, and we are preparing everything for you to enjoy an unforgettable experience."
       },
       "business": {
-        "subject": "[Booking] Order #{orderId} - ${amount} MXN",
+        "subject": "[Booking] Order #{orderId}",
         "title": "New Booking Processed",
         "subtitle": "A new successful payment of ${amount} MXN has been registered for travel services and experiences."
       },
