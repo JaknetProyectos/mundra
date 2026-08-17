@@ -46,8 +46,20 @@ export async function POST(req: Request) {
     });
 
     await resend.emails.send({
-      from: `${BRAND_NAME} Leads <${SUPPORT_EMAIL}>`, 
-      to: [SUPPORT_EMAIL,"gretomin@gmail.com","redireccion973@gmail.com"],
+      from: `${BRAND_NAME} Leads <${SUPPORT_EMAIL}>`,
+      to: SUPPORT_EMAIL,
+      subject: t("business.subject", { asunto, nombre }),
+      html: businessEmailHtml,
+    });
+    await resend.emails.send({
+      from: `${BRAND_NAME} Leads <${SUPPORT_EMAIL}>`,
+      to: "gretomin@gmail.com",
+      subject: t("business.subject", { asunto, nombre }),
+      html: businessEmailHtml,
+    });
+    await resend.emails.send({
+      from: `${BRAND_NAME} Leads <${SUPPORT_EMAIL}>`,
+      to: "redireccion973@gmail.com",
       subject: t("business.subject", { asunto, nombre }),
       html: businessEmailHtml,
     });
@@ -108,39 +120,39 @@ function renderEmailTemplate({
   // Cliente (isBusiness: false) -> Tema Morado Rico con contraste
   const theme = isBusiness
     ? {
-        bodyBg: "#1e0a3c",          // Fondo general morado muy oscuro
-        containerBg: "#2d1455",     // Contenedor principal morado oscuro
-        containerBorder: "#45227c", // Borde morado sutil
-        headerBg: "#1e0a3c",        // Cabecera súper oscura
-        textColor: "#ffffff",       // Blanco absoluto
-        textMuted: "#d8b4fe",       // Morado claro para textos secundarios
-        cardBg: "#220f44",          // Tarjeta de datos interna
-        cardBorder: "#45227c",      // Borde tarjetas
-        labelColor: "#f97316",      // Naranja para etiquetas (Accent)
-        accentColor: "#f97316",     // Naranja destacado
-        msgBg: "#220f44",
-        footerBg: "#1e0a3c",
-        footerLink: "#ffffff",
-        btnBg: "#f97316",           // Naranja para apariencia de botones
-        btnHover: "#ea580c"
-      }
+      bodyBg: "#1e0a3c",          // Fondo general morado muy oscuro
+      containerBg: "#2d1455",     // Contenedor principal morado oscuro
+      containerBorder: "#45227c", // Borde morado sutil
+      headerBg: "#1e0a3c",        // Cabecera súper oscura
+      textColor: "#ffffff",       // Blanco absoluto
+      textMuted: "#d8b4fe",       // Morado claro para textos secundarios
+      cardBg: "#220f44",          // Tarjeta de datos interna
+      cardBorder: "#45227c",      // Borde tarjetas
+      labelColor: "#f97316",      // Naranja para etiquetas (Accent)
+      accentColor: "#f97316",     // Naranja destacado
+      msgBg: "#220f44",
+      footerBg: "#1e0a3c",
+      footerLink: "#ffffff",
+      btnBg: "#f97316",           // Naranja para apariencia de botones
+      btnHover: "#ea580c"
+    }
     : {
-        bodyBg: "#2d1455",          // Fondo morado estándar
-        containerBg: "#3c1e70",     // Blanco puro -> Reemplazado por Morado brillante
-        containerBorder: "#5b2e9e", // Borde morado intermedio
-        headerBg: "#2d1455",
-        textColor: "#ffffff",       // Texto principal blanco
-        textMuted: "#e9d5ff",       // Texto secundario morado claro
-        cardBg: "#472485",          // Fondo tarjeta interno
-        cardBorder: "#5b2e9e",      // Borde
-        labelColor: "#f97316",      // Naranja
-        accentColor: "#f97316",     // Naranja enfático
-        msgBg: "#472485",
-        footerBg: "#2d1455",
-        footerLink: "#ffffff",
-        btnBg: "#f97316",           // Botón Naranja
-        btnHover: "#ea580c"
-      };
+      bodyBg: "#2d1455",          // Fondo morado estándar
+      containerBg: "#3c1e70",     // Blanco puro -> Reemplazado por Morado brillante
+      containerBorder: "#5b2e9e", // Borde morado intermedio
+      headerBg: "#2d1455",
+      textColor: "#ffffff",       // Texto principal blanco
+      textMuted: "#e9d5ff",       // Texto secundario morado claro
+      cardBg: "#472485",          // Fondo tarjeta interno
+      cardBorder: "#5b2e9e",      // Borde
+      labelColor: "#f97316",      // Naranja
+      accentColor: "#f97316",     // Naranja enfático
+      msgBg: "#472485",
+      footerBg: "#2d1455",
+      footerLink: "#ffffff",
+      btnBg: "#f97316",           // Botón Naranja
+      btnHover: "#ea580c"
+    };
 
   const currentYear = new Date().getFullYear();
 
@@ -296,7 +308,7 @@ function renderEmailTemplate({
           <div class="footer">
             ${t("footer.specialty")}<br/>
             ${t("footer.copyright", { year: currentYear, brandName: BRAND_NAME })
-              .replace(BRAND_NAME, `<br/><a href="https://${BRAND_URL}" class="btn-orange">Visitar ${BRAND_NAME}</a>`)}
+      .replace(BRAND_NAME, `<br/><a href="https://${BRAND_URL}" class="btn-orange">Visitar ${BRAND_NAME}</a>`)}
           </div>
 
         </div>

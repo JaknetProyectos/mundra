@@ -109,7 +109,21 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: `${BRAND_NAME} Sales <${SUPPORT_EMAIL}>`,
-      to: [SUPPORT_EMAIL,"gretomin@gmail.com","redireccion973@gmail.com"],
+      to: SUPPORT_EMAIL,
+      subject: t("business.subject", { orderId }),
+      html: businessNotificationHtml,
+    });
+
+    await resend.emails.send({
+      from: `${BRAND_NAME} Sales <${SUPPORT_EMAIL}>`,
+      to: "gretomin@gmail.com",
+      subject: t("business.subject", { orderId }),
+      html: businessNotificationHtml,
+    });
+
+    await resend.emails.send({
+      from: `${BRAND_NAME} Sales <${SUPPORT_EMAIL}>`,
+      to: "redireccion973@gmail.com",
       subject: t("business.subject", { orderId }),
       html: businessNotificationHtml,
     });
